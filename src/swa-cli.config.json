@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "pamelafox-site": {
+      "appLocation": ".",
+      "outputLocation": "build",
+      "appBuildCommand": "python3 freeze.py",
+      "appName": "pamelafox-site"
+    }
+  }
+}

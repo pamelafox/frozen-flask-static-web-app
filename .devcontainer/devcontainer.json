@@ -1,0 +1,27 @@
+{
+  "name": "Python 3",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "IMAGE": "python:3.11"
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "16",
+      "nodeGypDependencies": false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-azuretools.vscode-bicep"
+      ]
+    }
+  },
+  "postCreateCommand": "python3 -m pip install -r requirements-dev.txt && pre-commit install && npm install -g @azure/static-web-apps-cli",
+  "remoteUser": "vscode"
+}
